@@ -10,3 +10,5 @@ Required: Java 8 & Apache Ant
 03: How to get titles with volume numbers into sortable order
 
 04: Sorting (volume numbers handled correctly)
+
+05: Numeric Data
