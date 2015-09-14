@@ -34,9 +34,9 @@ public class Example {
         Analyzer analyzer = new BasicAnalyzer();
         
         writeIndex(directory, analyzer);
-        searchIndex(directory, analyzer, "DVD");
-        searchIndex(directory, analyzer, "シティ");
-        searchIndex(directory, analyzer, "インセプション");
+        searchIndex(directory, analyzer, "DVD"); // Changed
+        searchIndex(directory, analyzer, "シティ"); // Changed
+        searchIndex(directory, analyzer, "インセプション"); // Changed
     }
     
     public static void writeIndex(Directory directory, Analyzer analyzer) 

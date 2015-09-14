@@ -14,7 +14,7 @@ public class BasicAnalyzer
     public BasicAnalyzer() {
         super(AnalyzerWrapper.PER_FIELD_REUSE_STRATEGY);
         
-        defaultAnalyzer = new JapaneseAnalyzer();
+        defaultAnalyzer = new JapaneseAnalyzer(); // Changed
         fieldAnalyzers = new HashMap<>();
         
         fieldAnalyzers.put("identifier", new WhitespaceLowerCaseAnalyzer());
