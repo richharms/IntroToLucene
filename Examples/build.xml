@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="compile" name="Utilities">
+    
+    <target name="compile">
+        <parallel>
+            <ant dir="01" target="compile"/>
+            <ant dir="02" target="compile"/>
+            <ant dir="04" target="compile"/>
+        </parallel>
+    </target>
+    
+    <target name="clean">
+        <parallel>
+            <ant dir="01" target="clean"/>
+            <ant dir="02" target="clean"/>
+            <ant dir="04" target="clean"/>
+        </parallel>
+    </target>
+        
+</project>
+

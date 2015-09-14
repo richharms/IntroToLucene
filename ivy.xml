@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+    <info organisation="com.echothree" module="EchoThree"/>
+    <configurations>
+        <conf name="sources" description="Source jars"/>
+        <conf name="javadoc" description="Javadoc jars"/>
+        <conf name="binaries" description="Binary jars"/>
+    </configurations>
+    <dependencies>
+        <dependency org="com.ibm.icu" name="icu4j" rev="55.1" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.3.0" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-core" rev="5.3.0" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-kuromoji" rev="5.3.0" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-queryparser" rev="5.3.0" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-suggest" rev="5.3.0" conf="sources->sources" />
+
+        <dependency org="com.ibm.icu" name="icu4j" rev="55.1" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.3.0" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-core" rev="5.3.0" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-kuromoji" rev="5.3.0" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-queryparser" rev="5.3.0" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-suggest" rev="5.3.0" conf="javadoc->javadoc" />
+
+        <dependency org="com.ibm.icu" name="icu4j" rev="55.1" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.3.0" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-core" rev="5.3.0" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-kuromoji" rev="5.3.0" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-queryparser" rev="5.3.0" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-suggest" rev="5.3.0" conf="binaries->default" />
+    </dependencies>
+</ivy-module>
