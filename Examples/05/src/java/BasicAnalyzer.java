@@ -17,7 +17,6 @@ public class BasicAnalyzer
         defaultAnalyzer = new EnglishAnalyzer();
         fieldAnalyzers = new HashMap<>();
         
-        fieldAnalyzers.put("identifier", new WhitespaceLowerCaseAnalyzer());
         fieldAnalyzers.put("asin", new WhitespaceLowerCaseAnalyzer());
     }
 

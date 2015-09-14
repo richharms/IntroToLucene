@@ -64,9 +64,9 @@ public class Example {
             throws IOException {
         Document document = new Document();
         
-        document.add(new Field(FIELD_IDENTIFIER, identifier.toLowerCase(), FieldTypes.STORED_NOT_TOKENIZED));
-        document.add(new Field(FIELD_ASIN, asin.toLowerCase(), FieldTypes.STORED_NOT_TOKENIZED));
-        document.add(new Field(FIELD_TITLE, title.toLowerCase(), FieldTypes.NOT_STORED_TOKENIZED));
+        document.add(new Field(FIELD_IDENTIFIER, identifier, FieldTypes.STORED_NOT_TOKENIZED));
+        document.add(new Field(FIELD_ASIN, asin, FieldTypes.NOT_STORED_TOKENIZED));
+        document.add(new Field(FIELD_TITLE, title, FieldTypes.NOT_STORED_TOKENIZED));
         document.add(new SortedDocValuesField(FIELD_TITLE + IndexFieldVariationSeparator + IndexFieldVariation_Sortable, new BytesRef(title))); // Added
         
         indexWriter.addDocument(document);
