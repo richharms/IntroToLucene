@@ -1,6 +1,8 @@
 # IntroToLucene
 Introduction to Lucene
 
+Examples have been written to work with Lucene 5.3.0.
+
 Required: Java 8 & Apache Ant, project is setup for NetBeans 8
 
 01: Multiple Fields, Different Analyzers
@@ -13,4 +15,6 @@ Required: Java 8 & Apache Ant, project is setup for NetBeans 8
 
 05: Numeric Data
 
-05: Updating Data
+06: Updating Data
+
+07: Default Operator
