@@ -3,6 +3,7 @@ Introduction to Lucene
 
 Required: Java 8 & Apache Ant
 
-01: Lucene Example: Multiple Fields, Different Analyzers
-02: Lucene Example: Sorting (doesn't handle volume numbers correctly)
-04: Lucene Example: Sorting (volume numbers handled correctly)
+01: Multiple Fields, Different Analyzers
+02: Sorting (doesn't handle volume numbers correctly)
+03: How to get titles with volume numbers into sortable order
+04: Sorting (volume numbers handled correctly)

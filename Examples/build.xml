@@ -5,6 +5,7 @@
         <parallel>
             <ant dir="01" target="compile"/>
             <ant dir="02" target="compile"/>
+            <ant dir="03" target="compile"/>
             <ant dir="04" target="compile"/>
         </parallel>
     </target>
@@ -13,6 +14,7 @@
         <parallel>
             <ant dir="01" target="clean"/>
             <ant dir="02" target="clean"/>
+            <ant dir="03" target="clean"/>
             <ant dir="04" target="clean"/>
         </parallel>
     </target>
