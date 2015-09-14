@@ -90,19 +90,10 @@ auxiliary.show.customizer.message=<message>
         <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/4">
             <compilation-unit>
                 <package-root>Examples/01/src/java</package-root>
-                <classpath mode="compile">build/lib/icu4j.jar:build/lib/lucene-analyzers-common.jar:build/lib/lucene-analyzers-kuromoji.jar:build/lib/lucene-core.jar:build/lib/lucene-misc.jar:build/lib/lucene-queries.jar:build/lib/lucene-queryparser.jar:build/lib/lucene-sandbox.jar:build/lib/lucene-suggest.jar</classpath>
-                <source-level>1.8</source-level>
-            </compilation-unit>
-            <compilation-unit>
                 <package-root>Examples/02/src/java</package-root>
-                <source-level>1.8</source-level>
-            </compilation-unit>
-            <compilation-unit>
                 <package-root>Examples/03/src/java</package-root>
-                <source-level>1.8</source-level>
-            </compilation-unit>
-            <compilation-unit>
                 <package-root>Examples/04/src/java</package-root>
+                <classpath mode="compile">build/lib/icu4j.jar:build/lib/lucene-analyzers-common.jar:build/lib/lucene-analyzers-kuromoji.jar:build/lib/lucene-core.jar:build/lib/lucene-misc.jar:build/lib/lucene-queries.jar:build/lib/lucene-queryparser.jar:build/lib/lucene-sandbox.jar:build/lib/lucene-suggest.jar</classpath>
                 <source-level>1.8</source-level>
             </compilation-unit>
         </java-data>
