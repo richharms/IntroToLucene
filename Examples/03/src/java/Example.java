@@ -14,6 +14,7 @@ public class Example {
         getSortableDescription("Volume 1");
         getSortableDescription("Volume 10");
         getSortableDescription("Volume 2");
+        getSortableDescription("Volume -2");
     }
 
     private static List<String> tokenizeString(String string) {
