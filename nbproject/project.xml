@@ -50,6 +50,12 @@ auxiliary.show.customizer.message=<message>
                     <location>Examples/05/src/java</location>
                     <encoding>UTF-8</encoding>
                 </source-folder>
+                <source-folder>
+                    <label>Examples/06/src/java</label>
+                    <type>java</type>
+                    <location>Examples/06/src/java</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
             </folders>
             <ide-actions>
                 <action name="build">
@@ -85,6 +91,10 @@ auxiliary.show.customizer.message=<message>
                         <label>Examples/05/src/java</label>
                         <location>Examples/05/src/java</location>
                     </source-folder>
+                    <source-folder style="packages">
+                        <label>Examples/06/src/java</label>
+                        <location>Examples/06/src/java</location>
+                    </source-folder>
                     <source-file>
                         <location>build.xml</location>
                     </source-file>
@@ -104,6 +114,7 @@ auxiliary.show.customizer.message=<message>
                 <package-root>Examples/03/src/java</package-root>
                 <package-root>Examples/04/src/java</package-root>
                 <package-root>Examples/05/src/java</package-root>
+                <package-root>Examples/06/src/java</package-root>
                 <classpath mode="compile">build/lib/icu4j.jar:build/lib/lucene-analyzers-common.jar:build/lib/lucene-analyzers-kuromoji.jar:build/lib/lucene-core.jar:build/lib/lucene-misc.jar:build/lib/lucene-queries.jar:build/lib/lucene-queryparser.jar:build/lib/lucene-sandbox.jar:build/lib/lucene-suggest.jar</classpath>
                 <source-level>1.8</source-level>
             </compilation-unit>
