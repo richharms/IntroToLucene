@@ -64,12 +64,7 @@ public class Example {
         
         indexWriter.addDocument(document);
     }
-    
-    private static void deleteDocument(IndexWriter indexWriter, String identifier)
-            throws IOException {
-        indexWriter.deleteDocuments(new Term(FIELD_IDENTIFIER, identifier));
-    }
-    
+        
     protected static int getNumHits(IndexSearcher is, Query q)
             throws IOException {
         TotalHitCountCollector collector = new TotalHitCountCollector();
