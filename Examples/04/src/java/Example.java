@@ -84,7 +84,6 @@ public class Example {
         return collector.getTotalHits();
     }
     
-    // Added
     private static Sort getSort() {
         SortField[] sortFields = new SortField[]{new SortField(FIELD_TITLE + IndexFieldVariationSeparator + IndexFieldVariation_Sortable, SortField.Type.STRING, false)};
         
@@ -105,8 +104,8 @@ public class Example {
         if(numHits == 0) {
             System.out.println("    No matches.");
         } else {
-            TopFieldDocs topFieldDocs = indexSearcher.search(query, numHits, getSort()); // Changed
-            ScoreDoc[] hits = topFieldDocs.scoreDocs; // Changed
+            TopFieldDocs topFieldDocs = indexSearcher.search(query, numHits, getSort());
+            ScoreDoc[] hits = topFieldDocs.scoreDocs;
             final int hitCount = hits.length;
             
             if(hitCount > 0) {
