@@ -18,3 +18,5 @@ Required: Java 8 & Apache Ant, project is setup for NetBeans 8
 06: Updating Data
 
 07: Default Operator
+
+08: Turning Japanese
