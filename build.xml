@@ -58,7 +58,7 @@
     </target>
     
     <target name="compile" depends="setup-ivy,ivy-lib">
-        <ant dir="Examples" target="jars"/>
+        <ant dir="Examples" target="compile"/>
     </target>
     
     <target name="clean">
