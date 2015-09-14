@@ -35,8 +35,8 @@ public class Example {
         Analyzer analyzer = new BasicAnalyzer();
         
         writeIndex(directory, analyzer);
-        searchIndex(directory, analyzer, "Year");
-        searchIndex(directory, analyzer, "Chapter");
+        searchIndex(directory, analyzer, "Year"); // Changed
+        searchIndex(directory, analyzer, "Chapter"); // Changed
     }
     
     public static void writeIndex(Directory directory, Analyzer analyzer) 
@@ -49,20 +49,8 @@ public class Example {
             addDocument(indexWriter, "1", "B011KME78M", "Tremors 5: Bloodlines (Blu-ray + DVD + DIGITAL HD)");
             addDocument(indexWriter, "2", "B00YHR5UW0", "Aloha [Blu-ray]");
             addDocument(indexWriter, "3", "B012DWS874", "Pixels (3D Blu-ray + Blu-ray + UltraViolet)");
-            addDocument(indexWriter, "4", "B00YT8SCSG", "Insidious: Year 3 (Blu-ray + Ultraviolet)");
-        }
-        
-        indexWriterConfig = new IndexWriterConfig(analyzer);
-        indexWriterConfig.setOpenMode(IndexWriterConfig.OpenMode.APPEND);
-        
-        try (IndexWriter indexWriter = new IndexWriter(directory, indexWriterConfig)) {
-            deleteDocument(indexWriter, "4");
-        }
-
-        indexWriterConfig = new IndexWriterConfig(analyzer);
-        indexWriterConfig.setOpenMode(IndexWriterConfig.OpenMode.APPEND);
-        
-        try (IndexWriter indexWriter = new IndexWriter(directory, indexWriterConfig)) {
+            addDocument(indexWriter, "4", "B00YT8SCSG", "Insidious: Year 3 (Blu-ray + Ultraviolet)"); // Changed
+            deleteDocument(indexWriter, "4"); // Added
             addDocument(indexWriter, "4", "B00YT8SCSG", "Insidious: Chapter 4 (Blu-ray + Ultraviolet)");
             addDocument(indexWriter, "5", "B00VGQKBQ0", "The Walking Dead: Season 5 [Blu-ray]");
         }
@@ -79,6 +67,7 @@ public class Example {
         indexWriter.addDocument(document);
     }
     
+    // Added
     private static void deleteDocument(IndexWriter indexWriter, String identifier)
             throws IOException {
         indexWriter.deleteDocuments(new Term(FIELD_IDENTIFIER, identifier));
