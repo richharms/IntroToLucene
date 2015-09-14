@@ -1,7 +1,7 @@
 # IntroToLucene
 Introduction to Lucene
 
-Required: Java 8 & Apache Ant
+Required: Java 8 & Apache Ant, project is setup for NetBeans 8
 
 01: Multiple Fields, Different Analyzers
 
