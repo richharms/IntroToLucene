@@ -83,7 +83,9 @@ public class Example {
     
     // Added
     private static Sort getSort() {
-        SortField[] sortFields = new SortField[]{new SortField(FIELD_TITLE + IndexFieldVariationSeparator + IndexFieldVariation_Sortable, SortField.Type.STRING, false)};
+        SortField[] sortFields = new SortField[]{
+            new SortField(FIELD_TITLE + IndexFieldVariationSeparator + IndexFieldVariation_Sortable, SortField.Type.STRING, false)
+        };
         
         return new Sort(sortFields);
     }
