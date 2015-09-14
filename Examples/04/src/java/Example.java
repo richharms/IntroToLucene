@@ -50,7 +50,7 @@ public class Example {
         indexWriterConfig.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
         
         try (IndexWriter indexWriter = new IndexWriter(directory, indexWriterConfig)) {
-            SortableDescriptionProducer sortableDescriptionProducer = SortableDescriptionProducerFactory.getInstance().getSortableDescriptionProducer("en");
+            SortableDescriptionProducer sortableDescriptionProducer = SortableDescriptionProducerFactory.getInstance().getSortableDescriptionProducer("en"); // Added
             
             addDocument(indexWriter, "1", "B011KME78M", "Tremors 5: Bloodlines (Blu-ray + DVD + DIGITAL HD)", sortableDescriptionProducer);
             addDocument(indexWriter, "2", "B00YHR5UW0", "Aloha [Blu-ray]", sortableDescriptionProducer);
@@ -70,7 +70,7 @@ public class Example {
         document.add(new Field(FIELD_IDENTIFIER, identifier.toLowerCase(), FieldTypes.STORED_NOT_TOKENIZED));
         document.add(new Field(FIELD_ASIN, asin.toLowerCase(), FieldTypes.STORED_NOT_TOKENIZED));
         document.add(new Field(FIELD_TITLE, title.toLowerCase(), FieldTypes.NOT_STORED_TOKENIZED));
-        document.add(new SortedDocValuesField(FIELD_TITLE + IndexFieldVariationSeparator + IndexFieldVariation_Sortable, new BytesRef(sortableDescriptionProducer.getSortableDescription(title)))); // Added
+        document.add(new SortedDocValuesField(FIELD_TITLE + IndexFieldVariationSeparator + IndexFieldVariation_Sortable, new BytesRef(sortableDescriptionProducer.getSortableDescription(title)))); // Changed
         
         indexWriter.addDocument(document);
     }
