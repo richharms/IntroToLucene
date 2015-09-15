@@ -37,7 +37,7 @@ public class Example {
         searchIndex(directory, analyzer, "Blu-ray");
         searchIndex(directory, analyzer, "Pixels");
         searchIndex(directory, analyzer, "identifier:5");
-        searchIndex(directory, analyzer, "asin:B00YHR5UW0".toLowerCase());
+        searchIndex(directory, analyzer, "asin:B00YHR5UW0");
     }
     
     public static void writeIndex(Directory directory, Analyzer analyzer) 
