@@ -45,23 +45,25 @@ public class AttributeQueryParserUtils {
     }
     
     protected BooleanQuery newBooleanQuery(boolean disableCoord) {
-        return new BooleanQuery(disableCoord);
+        return new BooleanQuery.Builder().setDisableCoord(disableCoord).build();
     }
     
     protected Query getBooleanQuery(List<BooleanClause> clauses, boolean disableCoord) {
-        BooleanQuery query;
+        BooleanQuery.Builder builder;
         
         if(clauses.isEmpty()) {
-            query = null; // all clause words were filtered away by the analyzer.
+            builder = null; // all clause words were filtered away by the analyzer.
         } else {
-            query = newBooleanQuery(disableCoord);
+            builder = new BooleanQuery.Builder();
+
+            builder.setDisableCoord(disableCoord);
             
             clauses.stream().forEach((clause) -> {
-                query.add(clause);
+                builder.add(clause);
             });
         }
         
-        return query;
+        return builder == null ? null : builder.build();
     }
   
     protected Query getFieldQuery(String rawField, String[] rawFields, Map<String,Float> boosts, String queryText, boolean quoted)
