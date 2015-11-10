@@ -15,6 +15,9 @@ public class Example {
             throws Exception {
         final String input = "This is a test. How about that?! Huh?";
 
+        System.out.println("input = \"" + input + "\"");
+        System.out.println();
+
         TokenizerExamples(input);
     }
     
