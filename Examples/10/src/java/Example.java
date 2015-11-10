@@ -18,40 +18,40 @@ public class Example {
     
     public static void main(String args[])
             throws Exception {
-        final String input = "This is a test. How about that?! Huh?";
-        //final String input = "セックス・アンド・ザ・シティ2 ［ザ・ムービー］ [DVD]";
-        
+        AnalyzerExamples("This is a test. How about that?! Huh?");
+        AnalyzerExamples("セックス・アンド・ザ・シティ2 ［ザ・ムービー］ [DVD]");
+    }
+    
+    public static void AnalyzerExamples(String input) 
+            throws IOException {
         System.out.println("input = \"" + input + "\"");
         System.out.println();
 
-        AnalyzerExamples(FIELD_TITLE, input);
-        AnalyzerExamples(FIELD_ASIN, input);
+        BasicAnalyzerExample(input, FIELD_TITLE, FIELD_ASIN);
+        JapaneseAnalyzerExample(input, FIELD_TITLE, FIELD_ASIN);
     }
     
-    public static void AnalyzerExamples(String field, String input) 
+    public static void BasicAnalyzerExample(String input, String... fields) 
             throws IOException {
-        System.out.println("Field = " + field);
-        
-        BasicAnalyzerExample(field, input);
-        JapaneseAnalyzerExample(field, input);
-    }
-    
-    public static void BasicAnalyzerExample(String field, String input) 
-            throws IOException {
-        try (Analyzer analyzer = new BasicAnalyzer()) {
-            ExecuteAnalyzerExample(field, input, analyzer);
+        for(String field : fields) {
+            try (Analyzer analyzer = new BasicAnalyzer()) {
+                ExecuteAnalyzerExample(field, input, analyzer);
+            }
         }
     }
     
-    public static void JapaneseAnalyzerExample(String field, String input) 
+    public static void JapaneseAnalyzerExample(String input, String... fields) 
             throws IOException {
-        try (Analyzer analyzer = new JapaneseAnalyzer()) {
-            ExecuteAnalyzerExample(field, input, analyzer);
+        for(String field : fields) {
+            try (Analyzer analyzer = new JapaneseAnalyzer()) {
+                ExecuteAnalyzerExample(field, input, analyzer);
+            }
         }
     }
     
     public static List<String> ExecuteAnalyzerExample(String field, String input, Analyzer analyzer) 
             throws IOException {
+        System.out.println("Field = " + field);
         System.out.println("  Analyzer = " + analyzer.getClass().getSimpleName());
         
         TokenStream ts = analyzer.tokenStream(field, input);
