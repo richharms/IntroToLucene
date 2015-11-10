@@ -23,4 +23,6 @@ Required: Java 8 & Apache Ant, project is setup for NetBeans 8
 
 09: Tokenizers
 
+10: Analyzers
+
 Each example is in its own subdirectory, running ant with no parameters in each directory will execute the example.

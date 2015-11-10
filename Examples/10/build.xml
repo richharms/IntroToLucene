@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Example01" default="Example" basedir=".">
+
+    <property name="component.home" value="./"/>
+    <property name="metadata.dir" value="${component.home}/src/metadata"/>
+    
+    <target name="compile">
+        <mkdir dir="build"/>
+        <mkdir dir="build/classes"/>
+        <javac
+            debug="true"
+            source="1.8"
+            target="1.8"
+            srcdir="./src/java"
+            destdir="./build/classes"
+            includeAntRuntime="false">
+            <classpath>
+                <pathelement location="./"/>
+                <fileset dir="../../lib">
+                    <include name="**/*.jar"/>
+                </fileset>
+                <fileset dir="../../build/lib">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+    
+    <target name="Example" depends="compile">
+        <java classname="Example" fork="true">
+            <classpath>
+                <pathelement path="${metadata.dir}" />
+                <pathelement location="./build/classes"/>
+                <fileset dir="../../lib">
+                    <include name="**/*.jar"/>
+                </fileset>
+                <fileset dir="../../build/lib">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="clean">
+        <echo message="Deleting directory build" />
+        <delete includeemptydirs="true" quiet="true">
+            <fileset dir="build">
+                <include name="**" />
+            </fileset>
+            <fileset dir="index">
+                <include name="**" />
+            </fileset>
+        </delete>
+    </target>
+</project>
