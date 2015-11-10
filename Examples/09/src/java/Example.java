@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -11,11 +10,6 @@ import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 
 public class Example {
-    
-    private static final String FIELD_IDENTIFIER = "identifier";
-    private static final String FIELD_ASIN = "asin";
-    private static final String FIELD_TITLE = "title";
-    
     // Based on: http://lucidbox.com/?p=26
     public static void main(String args[])
             throws Exception {
