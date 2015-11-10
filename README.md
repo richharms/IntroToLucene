@@ -21,4 +21,6 @@ Required: Java 8 & Apache Ant, project is setup for NetBeans 8
 
 08: Turning Japanese
 
+09: Tokenizers
+
 Each example is in its own subdirectory, running ant with no parameters in each directory will execute the example.
