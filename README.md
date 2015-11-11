@@ -25,4 +25,6 @@ Required: Java 8 & Apache Ant, project is setup for NetBeans 8.1
 
 10: Analyzers
 
+11: Spell Checker
+
 Each example is in its own subdirectory, running ant with no parameters in each directory will execute the example.
