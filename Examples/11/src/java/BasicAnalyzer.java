@@ -18,7 +18,7 @@ public class BasicAnalyzer
         fieldAnalyzers = new HashMap<>();
         
         fieldAnalyzers.put("asin", new WhitespaceLowerCaseAnalyzer());
-        fieldAnalyzers.put(Example.FIELD_TITLE + Example.IndexFieldVariationSeparator + Example.IndexFieldVariation_Dictionary, new DictionaryAnalyzer());
+        fieldAnalyzers.put(Example11.FIELD_TITLE + Example11.IndexFieldVariationSeparator + Example11.IndexFieldVariation_Dictionary, new DictionaryAnalyzer());
     }
 
     @Override

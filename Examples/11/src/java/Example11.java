@@ -18,7 +18,7 @@ import org.apache.lucene.search.spell.SuggestWord;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
-public class Example {
+public class Example11 {
     
     public static final String INDEX_DIRECTORY = "index";
     
