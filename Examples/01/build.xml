@@ -23,6 +23,7 @@
                     <include name="**/*.jar"/>
                 </fileset>
             </classpath>
+            <compilerarg value="-Xlint:deprecation" />
         </javac>
     </target>
     

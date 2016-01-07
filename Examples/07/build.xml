@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Example01" default="Example" basedir=".">
+<project name="Example07" default="Example" basedir=".">
 
     <property name="component.home" value="./"/>
     <property name="metadata.dir" value="${component.home}/src/metadata"/>
@@ -23,6 +23,7 @@
                     <include name="**/*.jar"/>
                 </fileset>
             </classpath>
+            <compilerarg value="-Xlint:deprecation" />
         </javac>
     </target>
     
