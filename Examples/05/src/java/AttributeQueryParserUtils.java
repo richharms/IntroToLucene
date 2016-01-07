@@ -5,6 +5,7 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.BoostQuery;
 import org.apache.lucene.search.NumericRangeQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
@@ -84,7 +85,7 @@ public class AttributeQueryParserUtils {
                         Float boost = boosts.get(rawFields[i]);
                         
                         if (boost != null) {
-                            q.setBoost(boost);
+                            q = new BoostQuery(q, boost);
                         }
                     }
                     
