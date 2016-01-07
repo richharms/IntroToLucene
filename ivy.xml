@@ -8,24 +8,24 @@
     </configurations>
     <dependencies>
         <dependency org="com.ibm.icu" name="icu4j" rev="55.1" conf="sources->sources" />
-        <dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.3.1" conf="sources->sources" />
-        <dependency org="org.apache.lucene" name="lucene-core" rev="5.3.1" conf="sources->sources" />
-        <dependency org="org.apache.lucene" name="lucene-analyzers-kuromoji" rev="5.3.1" conf="sources->sources" />
-        <dependency org="org.apache.lucene" name="lucene-queryparser" rev="5.3.1" conf="sources->sources" />
-        <dependency org="org.apache.lucene" name="lucene-suggest" rev="5.3.1" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.4.0" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-core" rev="5.4.0" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-kuromoji" rev="5.4.0" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-queryparser" rev="5.4.0" conf="sources->sources" />
+        <dependency org="org.apache.lucene" name="lucene-suggest" rev="5.4.0" conf="sources->sources" />
 
         <dependency org="com.ibm.icu" name="icu4j" rev="55.1" conf="javadoc->javadoc" />
-        <dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.3.1" conf="javadoc->javadoc" />
-        <dependency org="org.apache.lucene" name="lucene-core" rev="5.3.1" conf="javadoc->javadoc" />
-        <dependency org="org.apache.lucene" name="lucene-analyzers-kuromoji" rev="5.3.1" conf="javadoc->javadoc" />
-        <dependency org="org.apache.lucene" name="lucene-queryparser" rev="5.3.1" conf="javadoc->javadoc" />
-        <dependency org="org.apache.lucene" name="lucene-suggest" rev="5.3.1" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.4.0" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-core" rev="5.4.0" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-kuromoji" rev="5.4.0" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-queryparser" rev="5.4.0" conf="javadoc->javadoc" />
+        <dependency org="org.apache.lucene" name="lucene-suggest" rev="5.4.0" conf="javadoc->javadoc" />
 
         <dependency org="com.ibm.icu" name="icu4j" rev="55.1" conf="binaries->default" />
-        <dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.3.1" conf="binaries->default" />
-        <dependency org="org.apache.lucene" name="lucene-core" rev="5.3.1" conf="binaries->default" />
-        <dependency org="org.apache.lucene" name="lucene-analyzers-kuromoji" rev="5.3.1" conf="binaries->default" />
-        <dependency org="org.apache.lucene" name="lucene-queryparser" rev="5.3.1" conf="binaries->default" />
-        <dependency org="org.apache.lucene" name="lucene-suggest" rev="5.3.1" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.4.0" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-core" rev="5.4.0" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-analyzers-kuromoji" rev="5.4.0" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-queryparser" rev="5.4.0" conf="binaries->default" />
+        <dependency org="org.apache.lucene" name="lucene-suggest" rev="5.4.0" conf="binaries->default" />
     </dependencies>
 </ivy-module>
