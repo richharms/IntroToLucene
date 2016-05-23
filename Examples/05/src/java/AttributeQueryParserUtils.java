@@ -1,16 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import org.apache.lucene.document.IntPoint;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.BoostQuery;
-import org.apache.lucene.search.NumericRangeQuery;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.TermQuery;
-import org.apache.lucene.util.BytesRefBuilder;
-import org.apache.lucene.util.NumericUtils;
 
 public class AttributeQueryParserUtils {
 
@@ -111,11 +108,7 @@ public class AttributeQueryParserUtils {
         String field = term.field();
         
         if(field.equals("released")) {
-            Integer val = intValueOf(term.text());
-            BytesRefBuilder bytesRefBuilder = new BytesRefBuilder();
-
-            NumericUtils.intToPrefixCoded(val, 0, bytesRefBuilder);
-            query = new TermQuery(new Term(field, bytesRefBuilder.get()));
+            query = IntPoint.newSetQuery(field, intValueOf(term.text()));
         }
         
         return query;
@@ -127,8 +120,8 @@ public class AttributeQueryParserUtils {
         if(rawField == null) {
             List<BooleanClause> clauses = new ArrayList<>(rawFields.length);
             
-            for(int i = 0; i < rawFields.length; i++) {
-                clauses.add(new BooleanClause(newRangeQuery(rawFields[i], null, min, max, startInclusive, endInclusive), BooleanClause.Occur.SHOULD));
+            for (String rawField1 : rawFields) {
+                clauses.add(new BooleanClause(newRangeQuery(rawField1, null, min, max, startInclusive, endInclusive), BooleanClause.Occur.SHOULD));
             }
             
             query = getBooleanQuery(clauses, true);
@@ -137,7 +130,7 @@ public class AttributeQueryParserUtils {
                 Integer valMin = intValueOf(min);
                 Integer valMax = intValueOf(max);
 
-                query = NumericRangeQuery.newIntRange(rawField, valMin, valMax, startInclusive, endInclusive);
+                query = IntPoint.newRangeQuery(rawField, startInclusive? valMin: Math.addExact(valMin, 1) , endInclusive? valMax: Math.addExact(valMax, -1));
             }
         }
         

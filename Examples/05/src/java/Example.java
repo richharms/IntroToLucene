@@ -3,7 +3,7 @@ import java.nio.file.Paths;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.document.IntField;
+import org.apache.lucene.document.IntPoint;
 import org.apache.lucene.document.SortedDocValuesField;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
@@ -68,7 +68,7 @@ public class Example {
         document.add(new Field(FIELD_ASIN, asin, FieldTypes.NOT_STORED_TOKENIZED));
         document.add(new Field(FIELD_TITLE, title, FieldTypes.NOT_STORED_TOKENIZED));
         document.add(new SortedDocValuesField(FIELD_TITLE + IndexFieldVariationSeparator + IndexFieldVariation_Sortable, new BytesRef(title)));
-        document.add(new IntField(FIELD_RELEASED, released, Field.Store.NO)); // Added
+        document.add(new IntPoint(FIELD_RELEASED, released)); // Added
         
         indexWriter.addDocument(document);
     }

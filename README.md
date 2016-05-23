@@ -1,7 +1,7 @@
 # IntroToLucene
 Introduction to Lucene
 
-Examples have been written to work with Lucene 5.4.1.
+Examples have been written to work with Lucene 6.0.0.
 
 Required: Java 8 & Apache Ant, project is setup for NetBeans 8.1
 
